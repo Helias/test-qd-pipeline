@@ -2,8 +2,10 @@
 using namespace std;
 
 int main() {
+  int x;
+  cout << x << endl;
 
-  cout << "Hello fantastic World" << endl;
+  cout << "Hello World" << endl;
 
   return 0;
 }
