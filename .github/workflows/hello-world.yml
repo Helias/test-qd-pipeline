@@ -1,4 +1,4 @@
-name: Hello-World
+name: build-hello-world
 
 on:
   push:
@@ -7,10 +7,15 @@ on:
     branches: [main]
 
 jobs:
-  hello-world-job:
-
+  build-hello-world:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Hello World
-        run: echo 'Hello World'
+      - uses: actions/checkout@v4
+
+      - name: install g++
+        run: sudo apt install -y g++
+
+      - name: check build
+        run: |
+          g++ hello_world.cpp -o hello_world
+          ./hello_world
