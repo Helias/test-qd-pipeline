@@ -17,5 +17,5 @@ jobs:
 
       - name: check build
         run: |
-          g++ hello_world.cpp -o hello_world -Wall
+          g++ hello_world.cpp -o hello_world -Wall -Werror
           ./hello_world
