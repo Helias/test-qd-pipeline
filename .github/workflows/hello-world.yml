@@ -16,6 +16,6 @@ jobs:
         run: sudo apt install -y g++
 
       - name: check build
-      run: |
+        run: |
           g++ hello_world.cpp -o hello_world
           ./hello_world
